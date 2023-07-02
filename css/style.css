@@ -1,0 +1,390 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Product Sans;
+    cursor: url('/Media/Cursor/default.svg'), default;
+}
+
+body {
+    background: url('/Media/Main/bg3.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@keyframes wallanimate {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blur img:hover {
+    filter: drop-shadow(0px 0px 10px rgba(173, 255, 47, 0.5));
+}
+
+#top-bar {
+    width: 100%;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    padding: 4px 0 1px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-bar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+
+
+
+
+#notice {
+    /* height: 90px; */
+    width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 38px;
+    right: 8px;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+}
+
+#notice p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#notice:hover {
+    box-shadow: 0px 0px 8px rgba(41, 41, 41, 0.5);
+}
+
+
+
+
+
+
+#launcher {
+    background: url('/Media/Main/bg3.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    visibility: hidden;
+    z-index: 8;
+    display: flex;
+    justify-content: space-between;
+}
+
+#status {
+    width: 450px;
+    height: 200px;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 1px 1px 8px black;
+    display: block;
+    position: absolute;
+    top: -250px;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    transition: all 0.15s linear;
+}
+
+#credits {
+    width: 450px;
+    height: 400px;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 1px 1px 8px black;
+    display: block;
+    position: absolute;
+    top: -410px;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    transition: all 0.15s linear;
+}
+
+@keyframes bs {
+    0% {
+        transform: translateY(-400px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.window {
+    width: 1400px;
+    height: 700px;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 1px 1px 8px black;
+    display: block;
+    position: absolute;
+    left: 65px;
+    top: 50px;
+    z-index: 6;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#calculator {
+    width: 260px;
+    height: 390px;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 1px 1px 8px black;
+    display: block;
+    position: absolute;
+    left: 600px;
+    top: 50px;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    text-align: center;
+    visibility: hidden;
+}
+
+#settings {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 1px 1px 8px black;
+    display: block;
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    text-align: center;
+    visibility: hidden;
+}
+
+
+.header {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    width: 100%;
+    height: 30px;
+    position: relative;
+    border: 0px solid transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/************ Docker **************/
+#docker {
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 25px rgba(5, 5, 5, 0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+#apps {
+    width: 500px;
+    height: 100%;
+    animation-name: dockanimate;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+}
+
+#apps img:hover {
+    filter: drop-shadow(0px 0px 10px rgba(173, 255, 47, 0.5));
+    /* filter: drop-shadow(0px 0px 10px deeppink); */
+}
+
+.nactive {
+    display: none;
+}
+
+.active {
+    filter: drop-shadow(0px 0px 10px rgba(173, 255, 47, 0.5));
+    /* filter: drop-shadow(0px 0px 10px deeppink); */
+}
+
+/*********** For docker like bar ************/
+
+/* #docker {
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 25px rgba(5, 5, 5, 0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 500px;
+    height: 75px;
+    animation-name: dockanimate;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+} */
+
+@keyframes dockanimate {
+    0% {
+        transform: translateY(90px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.nav {
+    background-color: rgb(239, 239, 239);
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+.nav i.qaction {
+    font-size: 25px;
+    background-color: rgb(221, 221, 221);
+    padding: 3px;
+    border: 0.5px solid grey;
+    border-radius: 3px;
+}
+
+.url {
+    background-color: rgb(221, 221, 221);
+    display: inline-block;
+    padding: 3px;
+    border: 0.5px solid grey;
+    border-radius: 3px;
+    width: 88%;
+    height: 26px;
+    cursor: url('/Media/Cursor/text.svg'), default;
+}
+
+.tcontent {
+    border-top: 2px solid grey;
+    background-color: rgb(221, 221, 221);
+    height: 100%;
+    width: 100%;
+    padding-top: 3px;
+}
+
+pre {
+    display: inline;
+    color: #393939;
+}
+
+.item {
+    margin: 2px 8px 0 8px;
+}
+
+.item:hover {
+    background-color: rgb(207, 207, 207);
+    border-radius: 8px;
+    
+}
+
+/* #trash {
+    visibility: visible;
+} */
+
+h2.ct {
+    cursor: url('/Media/Cursor/text.svg'), text;
+}
+
+#settings > img {
+    cursor: url('/Media/Cursor/pointer.svg'), pointer;
+}
+
+.text-doc {
+    display: inline-block;
+    z-index: 5;
+    position: absolute;
+    top: 35px;
+    right: 8px;
+    width: 90px;
+    height: auto;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+.text-doc:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+#newDoc {
+    background-color: rgba(5, 5, 5, 0.644);
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.formstyle  {
+    border-radius: 5px;  
+    padding: 20px;  
+    text-align: center;  
+}
+
+#calculator .btn{  
+    width: 50px;  
+    height: 50px;  
+    font-size: 25px;  
+    margin: 2px;
+    background-color: rgb(41, 41, 41);
+    border: 0px;
+    color: white;
+}
+
+#calculator .btn:hover {
+    background-color: rgba(41, 41, 41, 0.819);
+}
+
+#calculator .textview{  
+    width: 210px;
+    border: 0px;
+    font-size: 25px;  
+    padding: 5px;  
+    background-color: rgba(41, 41, 41, 0.819);
+    color: white;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Media/Main/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mayur OS</title>
+</head>
+<body>    
+    <div id="top-bar">
+        <div class="info">
+            <b><p style="margin-left: 8px;" id="cdate"></p></b>
+        </div>
+        <div class="osname">
+            <b>Mayur OS</b>
+        </div>
+        <div class="action">
+            <img title='Connect to "HBFi"' src="Media/Icons/wifi.png">
+            <img title="Speakers: 100%" src="Media/Icons/speaker.png">
+            <img id="battery" src="Media/Icons/battery.png">
+            <b><p style="float: right; margin-right: 8px; margin-left: 1px;" id="ctime" onload="showTime()"></p></b>
+        </div>
+    </div>
+
+    <div id="status">
+        <div id="statusheader" class="header">
+            <p style="margin-top: 5px; margin-left: 8px;"><b>Battery</b></p>
+            <img id="close" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <div class="container">
+        <img id="close" style="position: relative; top: 30px; left: 40px;" width="110px" height="110px" src="Media/Icons/sbattery.png" alt="">
+        <p style="position: relative; top: 60px; right: 50px;"><b>Battery Status: <span id="bsl"></span></b><br>Plug the pin in to charge the device.</p></div>
+    </div>
+
+    <div id="credits">
+        <div id="creditsheader" class="header">
+            <p style="margin-top: 5px; margin-left: 8px;"><b>Credits</b></p>
+            <img id="cclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <div class="container">
+            <img style="margin-left: 125px; margin-top: 30px; width: 200px; height: 200px;" src="Media/Main/logo.png" alt="">
+            <h2 class="ct" style="position: absolute; top: 290px; left: 90px; cursor: url('Media/Cursor/text.svg');">Created by Harsh Baranwal</h2><br>
+            <p style="position: absolute; color: rgb(109, 109, 109); font-size: 22px; top: 320px; left: 210px;">v1.1</p>
+        </div>
+    </div>
+
+
+    <!-- Apps section  -->
+
+    <div class="window" id="AutoDraw">
+        <div id="AutoDrawheader" class="header">
+            <img id="aresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>AutoDraw</b></p>
+            <img onclick="doc_ad" id="aclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.autodraw.com/" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="Code">
+        <div id="Codeheader" class="header">
+            <img id="cresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Code Editor</b></p>
+            <img id="codeclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://codesandbox.io/s/vanilla?file=/package.json" frameborder="0" width="100%" height="670px"></iframe>
+    </div>
+
+    <div class="window" id="flipkart">
+        <div id="flipkartheader" class="header">
+            <img id="fresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Flipkart</b></p>
+            <img id="fclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.flipkart.com/laptops/apple~brand/pr?sid=6bo,b5g" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="mail">
+        <div id="mailheader" class="header">
+            <img id="mresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Mail</b></p>
+            <img id="mclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.gmail.com/" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="jiosaavn">
+        <div id="jiosaavnheader" class="header">
+            <img id="jsresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Jio Saavn</b></p>
+            <img id="jsclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.jiosaavn.com/featured/hindi_90s/T64MUCqdndw_" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="instagram">
+        <div id="instagramheader" class="header">
+            <img id="igresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Instagram</b></p>
+            <img id="igclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.instagram.com/harshrbaranwal/" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="notebook">
+        <div id="notebookheader" class="header">
+            <img id="nbresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Notebook</b></p>
+            <img id="nbclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://www.onlinetexteditor.com/" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="window" id="chrome">
+        <div id="chromeheader" class="header">
+            <img id="chresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Google Chrome</b></p>
+            <img id="chclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <div class="nav">
+            <i class="material-icons qaction">arrow_back</i>
+            <i class="material-icons qaction">arrow_forward</i>
+            <i class="material-icons qaction">refresh</i>
+            <div class="url"><i class="material-icons" style="color: green; font-size: 25px;">lock</i> https://www.google.com</div>
+            <i class="material-icons qaction">star</i>
+            
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="http://www.google.com/search?igu=1" frameborder="0" width="100%" height="655px"></iframe>
+    </div>
+
+    <div id="calculator">
+        <div id="calculatorheader" class="header">
+            <p style="margin-top: 5px; margin-left: 8px;"><b>Calculator</b></p>
+            <img id="calclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <div class= "formstyle">  
+            <form name = "form1">  
+            <input class= "textview" name = "textview">  
+            </form>  
+            
+            <table >  
+            <tr>   
+                <td> <input class = "btn" type = "button" value = "C" onclick = "form1.textview.value = ' ' " > </td>  
+                <td> <input  class = "btn" type = "button" value = "B" onclick = "backspace()" > </td>  
+                <td> <input  class = "btn" type = "button" value = "/" onclick = "insert('/')" > </td>  
+                <td> <input class = "btn" type = "button" value = "x" onclick = "insert('*')" > </td>  
+            </tr>  
+                  
+            <tr>   
+                <td> <input class = "btn" type = "button" value = "7" onclick = "insert(7)" > </td>  
+                <td> <input class = "btn" type = "button" value = "8" onclick = "insert(8)" > </td>  
+                <td> <input class = "btn" type = "button" value = "9" onclick = "insert(9)" > </td>  
+                <td> <input class = "btn" type = "button" value = "-" onclick = "insert('-')" > </td>  
+            </tr>  
+                  
+            <tr>   
+                <td> <input class = "btn" type = "button" value = "4" onclick = "insert(4)" > </td>  
+                <td> <input class = "btn" type = "button" value = "5" onclick = "insert(5)" > </td>  
+                <td> <input class = "btn" type = "button" value = "6" onclick = "insert(6)" > </td>  
+                <td> <input class = "btn" type = "button" value = "+" onclick = "insert('+')" > </td>  
+            </tr>  
+                  
+            <tr>   
+                <td> <input class = "btn" type = "button" value = "1" onclick = "insert(1)" > </td>  
+                <td> <input class = "btn" type = "button" value = "2" onclick = "insert(2)" > </td>  
+                <td> <input class = "btn" type = "button" value = "3" onclick = "insert(3)" > </td>  
+                <td rowspan = 5> <input class = "btn" style = "height: 110px; background-color: #ff5910;" type = "button" value = "=" onclick = "equal()"> </td>  
+            </tr>  
+            <tr>  
+                <td colspan = 2> <input class = "btn" style = "width: 106px" type = "button" value = "0" onclick = "insert(0)" > </td>  
+                <td> <input class = "btn" type = "button" value = "." onclick = "insert('.')"> </td>  
+            </tr>  
+                </table>  
+                
+             </div>  
+    </div>
+
+    <div class="window" id="trash">
+        <div id="trashheader" class="header">
+            <img id="tresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Trash</b></p>
+            <img id="tclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <div class="tcontent">
+            <div class="item"><img style="margin: 5px 0 0 5px; display: inline-block;" width="18px" height="24px" src="Media/Icons/jpg.png">
+                <pre> background                             M://Desktop                              JPG File                      05-10-2022</pre>
+            </div>
+            <div class="item"><img style="margin: 5px 0 0 5px; display: inline-block;" width="18px" height="24px" src="Media/Icons/jpg.png">
+                <pre> IMG_943874272                    M://Desktop                              JPG File                       10-10-2022</pre>
+            </div>
+            <div class="item"><img style="margin: 5px 0 0 5px; display: inline-block;" width="18px" height="24px" src="Media/Icons/folder.png">
+                <pre> Work from home                   M://Desktop                              Folder                           10-10-2022</pre>
+            </div>
+        </div>
+    </div>
+
+    <div ondblclick="textwindow()" id="text-doc" class="text-doc">
+        <img src="Media/Icons/esfile.png" alt="" width="auto" height="60px" style="margin-top: 2px;">
+        <p id="name">New document</p>
+    </div>
+
+    <div id="settings">
+        <div id="settingsheader" class="header">
+            <img id="sresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Settings</b></p>
+            <img id="setclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <br>
+        <h2>Change the Wallpaper</h2><br>
+        <img onclick="bg1()" width="25%" src="Media/Main/bg1.jpg" alt="">
+        <img onclick="bg2()" width="30%" src="Media/Main/bg2.jpg" alt="">
+        <img onclick="bg3()" width="30%" src="Media/Main/bg3.jpg" alt=""><br>
+        <img onclick="bg4()" width="30%" src="Media/Main/bg4.jpg" alt="">
+        <img onclick="bg5()" width="30%" src="Media/Main/bg5.jpg" alt="">
+    </div>
+
+    <div class="window" id="grocial">
+        <div id="grocialheader" class="header">
+            <img id="ctresize" style="margin: 3px 0 0 5px;" width="22px" height="22px" src="Media/Icons/resize.png">
+            <p style="margin-top: 5px;"><b>Grocial</b></p>
+            <img id="ctclose" style="margin: 2px 3px 0 0;" width="25px" height="25px" src="Media/Icons/close.png">
+        </div>
+        <iframe style="border: 0px solid transparent; border-radius: 0 0 8px 8px;" src="https://grocial.web.app" frameborder="0" width="100%" height="655px"></iframe>
+    </div>
+
+
+    <div id="notice">
+        <h3>Hi buddy! 👋</h3>
+        <p>Welcome to Mayur OS, Feel free to use the system and share your valuable feedback to the developer.</p>
+    </div>
+
+    <!--  Bottom section  -->
+    <div id="launcher">
+        <div class="blur">
+            <img title="Calculator" id="calicon" style="margin-top: 120px; margin-left: 150px;" width="100px" height="100px" src="Media/Icons/calculator.png" alt="">
+            <img title="Google Chrome" id="chicon" style="margin-top: 120px;" width="100px" height="100px" src="Media/Icons/chrome.png" alt="">
+            <img title="Code Editor" id="codeicon" style="margin-top: 120px;" width="100px" height="100px" src="Media/Icons/code.png" alt="">
+            <img title="Contact" id="cticon" style="margin-top: 120px;" width="100px" height="100px" src="Media/Icons/contact.png" alt="">
+            <img title="Instagram" id="igicon" style="margin-top: 120px;" width="100px" height="100px" src="Media/Icons/instagram.png" alt="">
+            <img title="Jio Saavn" id="jsicon" style="margin-top: 120px; margin-right: 150px;" width="100px" height="100px" src="Media/Icons/jiosaavn.png" alt="">
+            <img title="Mail" id="micon" style="position: absolute; margin: 320px 0 0 150px;" width="100px" height="100px" src="Media/Icons/mail.png" alt="">
+            <img title="Notebook" id="nbicon" style="position: absolute; margin: 320px 0 0 385px;" width="95px" height="100px" src="Media/Icons/notebook.png" alt="">
+            <img title="Settings" id="seticon" style="position: absolute; margin: 320px 0 0 615px;" width="100px" height="100px" src="Media/Icons/settings.png" alt="">
+            <img title="Flipkart" id="ficon" style="position: absolute; margin: 320px 0 0 790px;" width="180px" height="100px" src="Media/Icons/flipkart.png" alt="">
+            <img title="AutoDraw" id="adicon" style="position: absolute; margin: 320px 0 0 1050px;" width="120px" height="100px" src="Media/Icons/autodraw.png" alt="">
+        </div>    
+    </div>
+
+
+
+
+<div id="docker"> 
+    <div id="apps">
+        <img id="creditsc" title="Mayur" width="52px" height="52px" style="margin: 6px 0 0 8px;" src="Media/Main/logo_lg.png">
+        <img id="launchsrch" title="Launcher" width="58px" height="58px" style="margin: 3px 0 0 0;" src="Media/Icons/launchpad.png">
+        <img width="54px" id="d_cticon" title="Chat" height="54px" style="margin: 5px 0 0 0;" src="Media/Icons/contact.png">
+        <img width="52px" onclick="doc()" title="Folder" height="60px" style="margin: 3px 0 0 0;" src="Media/Icons/folder.png">
+        <img width="53px" id="d_micon" title="Mail" height="53px" style="margin: 6px 0 0 0;" src="Media/Icons/mail.png">
+        <img width="50px" id="d_chicon" title="Google Chrome" height="50px" style="margin: 6px 0 0 0;" src="Media/Icons/chrome.png">
+        <img width="52px" class="nactive" id="d_calicon" title="Calculator" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/calculator.png">
+        <img width="52px" class="nactive" id="d_codeicon" title="Code Editor" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/code.png">
+        <img width="52px" class="nactive" id="d_igicon" title="Instagram" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/instagram.png">
+        <img width="52px" class="nactive" id="d_jsicon" title="Jio Saavn" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/jiosaavn.png">
+        <img width="46px" class="nactive" id="d_nbicon" title="Notebook" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/notebook.png">
+        <img width="52px" class="nactive" id="d_seticon" title="Settings" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/settings.png">
+        <img width="86px" class="nactive" id="d_ficon" title="Flipkart" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/flipkart.png">
+        <img width="58px" class="nactive" id="d_adicon" title="AutoDraw" height="52px" style="margin: 5px 0 0 0;" src="Media/Icons/autodraw.png">
+        <img width="40px" id="ticon" title="Trash" height="52px" style="margin: 5px 8px 0 0;" src="Media/Icons/trash.png" alt="">
+        <!-- For docker like bar
+        <img width="62px" height="62px" style="margin: 6px 0 0 8px;" src="/Media/Main/logo.png">
+        <img width="68px" height="68px" style="margin: 3px 0 0 0;" src="/Media/Icons/launchpad.png">
+        <img width="64px" height="64px" style="margin: 5px 0 0 0;" src="/Media/Icons/contact.png">
+        <img width="62px" height="70px" style="margin: 3px 0 0 0;" src="/Media/Icons/folder.png">
+        <img width="63px" height="63px" style="margin: 6px 0 0 0;" src="/Media/Icons/mail.png">
+        <img width="60px" height="60px" style="margin: 6px 0 0 0;" src="/Media/Icons/chrome.png">
+        <img width="50px" height="62px" style="margin: 5px 8px 0 0;" src="/Media/Icons/trash.png" alt=""> -->
+    </div>
+</div>
+<audio autoplay>
+    <source src="/Media/Sound/sound-main.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+</body>
+<script src="js/index.js"></script>
+<script src="js/dragging.js"></script>
+<script src="js/shell.js"></script>
+</html>

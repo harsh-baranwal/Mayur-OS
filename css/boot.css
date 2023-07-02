@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Product Sans;
+    cursor: url('/Media/Cursor/default.svg'), default;
+}
+
+body {
+    overflow: hidden;
+}
+
+.bg {
+    height: auto;
+    width: 100%;
+}
+
+.blur {
+    background-color: rgba(255, 255, 255, 0.336);
+    filter: blur(400px);
+    /* z-index: 2; */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    transform: translateY(-700px);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    padding: 5px;
+    width: 120px;
+}
+
+.logo {
+    transform: translateY(-700px);
+    width: 140px;
+    height: auto;
+}
+
+.neon {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(30deg, aqua, #1F0FEE, #EE0C8A, #EC0E33);
+    position: absolute;
+    bottom: 0;
+    /* left: 0px; */
+    z-index: 5;
+}
